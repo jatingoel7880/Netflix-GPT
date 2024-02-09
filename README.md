@@ -1,15 +1,25 @@
 # Netflix GPT
-- Crate react app
+- Create react app
 - Configured TailwindCss
+- HEader 
+- Routing of the app
+- Login Form
+- Sign Up form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Depolying our app to production
+- Create SignUp User Account 
 
 
 # Features
 - Login/Sign Up
   - Sign In /Sign Up Form 
-  - rediresct to Browse Page 
+  - redirect to Browse Page 
+
   
 - Browse (only after authentication)
-  - Heade
+  - Header
   - Main movie
     - Trailer in background
     - Movie Title and description 
