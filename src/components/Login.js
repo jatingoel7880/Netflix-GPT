@@ -10,6 +10,7 @@ import {
 import { auth } from "../utils/firebase"; //imported from firebase file
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BACK_LOGO, USER_AVATAR} from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -46,7 +47,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/60750129?v=4"
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               //dispatching an action to setup the store b/c usernname and photo is not getting update
@@ -67,6 +68,7 @@ const Login = () => {
               // An error occurred
               setErrorMessage(error.message);
             });
+            
           // console.log(user);
           //if the singup is success dispatch an action from here. and append this user object/info to my redux store
           //but not write that part here b/c have to write the dispatch part for signIn also. Instead of using dispatching action again and again we will
@@ -108,7 +110,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/5e16108c-fd30-46de-9bb8-0b4e1bbbc509/29d8d7d7-83cc-4b5f-aa9b-6fd4f68bfaa6/IN-en-20240205-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={BACK_LOGO}
           alt="logo"
         />
       </div>
